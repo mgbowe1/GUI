@@ -39,10 +39,14 @@ nav {
     background: #233434;
     color:#cddede;
     border-radius:5px;
-    font-size:1.1em;
+    font-size:0.8em;
+    font-family:Arial, Helvetica, sans-serif;
 }
 nav ul{
     list-style:none;
+}
+nav ul li {
+    display:inline-block;
 }
 nav ul a {
     color:#899a9a;
@@ -51,7 +55,7 @@ nav ul a {
     padding:5px;
     border-radius:5px;
 }
-nav ul a:hover {
+nav ul a:hover, nav ul a.active {
     background:#899a9a;
     color:#233434;
 }
