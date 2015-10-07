@@ -72,6 +72,22 @@ article p{
     float:left;
     width:calc(100% - 310px);
 }
+
+/*format dynamic content for assignment 5 */
+article #PageTitle {
+    text-decoration:underline;
+}
+article #ByLine {
+    text-indent: 1em;
+}
+article #PageContentAS5 h3 {
+    font-weight:bold;   
+}
+/*make instructions easier to read */
+article #PageContentAS5 ol li:nth-child(even){
+    color:#9a9a9a;
+}
+
 footer {
     text-align:center;
     clear:both;
