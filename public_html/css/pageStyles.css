@@ -96,3 +96,48 @@ img {
     float:right;
     margin:5px;
 }
+
+/* format tables and forms for assignment 6 */
+form {
+    text-align:right;
+    width:160px;
+}
+form input[type="number"] {
+    width:60px;
+    margin-bottom:2px;
+    margin-top:2px;
+}
+
+#as6TableContainer {
+    width:100%;
+    height:500px;
+    overflow:auto;
+    font-size:1.15em;
+    margin-top:10px;
+}
+#as6TableContainer table tr:nth-child(odd){
+    background: #cdcdcd;
+    color: #454545;
+}
+#as6TableContainer table tr:nth-child(even){
+    background: #9a9a9a;
+    color: #454545;
+}
+#as6TableContainer table tr:first-child{
+    background: #efefef;
+    color: #232323;
+}
+#as6TableContainer td {
+    border:0px;
+    border-collapse: collapse;
+    margin:-1px;
+    padding:3px;
+    text-align:center;
+    width:20px;
+    height:20px;
+}
+#as6TableContainer td:first-child {
+    padding:1px;
+    background: #efefef;
+    color: #232323;
+}
