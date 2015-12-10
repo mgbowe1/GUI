@@ -141,3 +141,57 @@ form input[type="number"] {
     background: #efefef;
     color: #232323;
 }
+
+/* Assignment 9 styling */
+.scrabbleBoard table td.sbSquare {
+    width:47px;
+    height:47px;
+    font-size:0.75em;
+    text-align:center;
+    background:#ffcdde;
+    border:1px solid #eeeeee;
+}
+.scrabbleBoard table td.boardStart {
+    font-size:1.5em;
+}
+.scrabbleBoard table td.tws {
+    background:#CC0000;
+}
+.scrabbleBoard table td.dls {
+    background:#6666FF;
+}
+.scrabbleBoard table td.tls {
+    background:#3333CC;
+}
+.scrabbleBoard table td.dws {
+    background:#FF6666; 
+}
+.scrabbleBoard {
+    clear:both;
+}
+.p1rack .scrabbleTile, .p2rack .scrabbleTile {
+    float:left;
+    width:40px;
+    height:40px;
+    background:#fcefa1;
+    color:#222222;
+    border:1px solid #222222;
+    border-radius:3px;
+    padding:1px;
+    margin-left:5px;
+    text-align:center;
+    -webkit-filter:opacity(0.8);
+    filter:opacity(0.8);
+}
+.scrabbleTile .LetterVal {
+    font-size:1.25em;
+    font-weight:bold;
+}
+.scrabbleTile .pointVal {
+    font-size:0.75em;
+    font-style:italic;
+    vertical-align:sub;
+}
+.messages {
+    height:30px;
+}

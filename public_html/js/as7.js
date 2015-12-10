@@ -1,10 +1,11 @@
 /* 
- * File: as6.js
+ * File: as7.js
  * Name: Michael Bowe
  * Email: michael_bowe@student.uml.edu or michael.g.bowe@gmail.com
  * 
- * Date: 10/20/2015
+ * Date: 11/5/2015
  */
+
 
 //resets the values of the form to their defaults
 var resetValues = function(){
@@ -12,45 +13,6 @@ var resetValues = function(){
     $("#colLow").val( 1);
     $("#rowHigh").val( 10);
     $("#colHigh").val( 10);
-};
-
-var validate = function(){
-    
-    //check we have integers not floats
-    if(!parseInt($("#rowLow").val()) ||
-            !parseInt($("#colLow").val()) ||
-            !parseInt($("#rowHigh").val()) ||
-            !parseInt($("#colHigh").val())) {
-        alert("All input values must be integers!");
-        return false;
-    }
-    
-    //swap values if in the wrong order
-    var intRowLower = parseInt($("#rowLow").val());
-    var intColLower = parseInt($("#colLow").val());
-    var intRowUpper = parseInt($("#rowHigh").val());
-    var intColUpper = parseInt($("#colHigh").val());
-    
-    if(intRowLower > intRowUpper){
-        //xor swap to avoid making another variable
-        intRowLower = intRowLower ^ intRowUpper;
-        intRowUpper = intRowLower ^ intRowUpper;
-        intRowLower = intRowLower ^ intRowUpper;
-    }
-    
-    if(intColLower > intColUpper){
-        //xor swap to avoid making another variable
-        intColLower = intColLower ^ intColUpper;
-        intColUpper = intColLower ^ intColUpper;
-        intColLower = intColLower ^ intColUpper;
-    }
-    
-    $("#rowLow").val( intRowLower);
-    $("#rowHigh").val( intRowUpper);
-    $("#colLow").val( intColLower);
-    $("#colHigh").val( intColUpper);
-    
-    return true;
 };
 
 $(document).ready(function(){
@@ -111,4 +73,9 @@ $(document).ready(function(){
     table += "</table>";
     
     $("#as6TableContainer").html(table);
+    
+    $("#tableInputs").validate({
+        
+    });
+    
 });

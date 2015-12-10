@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--
+File: as9.html
+Author: Michael Bowe, UMass Lowell Student
+Email: michael_bowe@student.uml.edu OR michael.g.bowe@gmail.com
+12/9/2015
+-->
+<html>
+    <head>
+        <title>
+            91.461 Assignment 9
+        </title>
+        <link rel="stylesheet" href="css/pageStyles.css">
+        <link rel="stylesheet" href="js/libs/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+        <script src="js/libs/jquery/jquery.js"></script>
+        <script src="js/libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+        <script src="js/as9.js"></script>
+    </head>
+    <body>
+        <!-- using a wrapper div to center page content -->
+        <div id="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Assignment 2</a></li>
+                    <li><a href="as3.html">Assignment 3</a></li>
+                    <li><a href="as5.html">Assignment 5</a></li>
+                    <li><a href="as6.html">Assignment 6</a></li>
+                    <li><a href="as7.html">Assignment 7</a></li>
+                    <li><a href="as9.html">Assignment 9</a></li>
+                </ul>
+            </nav>
+            <!-- Using Article to make use of new html5 tags
+             most pages would make this a div with class content-->
+            <article>
+                <h1>
+                    Scrabble!
+                </h1>
+                <div class="p1rack"></div>
+                <div class="messages">
+                    <span class="p1score"></span>
+                </div>
+                <div class="scrabbleBoard">
+                    <table>
+                        <tr>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws boardStart">&#9733;</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tls">Triple<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dws">Double<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                        </tr>
+                        <tr>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare dls">Double<br />Letter<br />Score</td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare"></td>
+                            <td class="sbSquare tws">Triple<br />Word<br />Score</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="p2rack"></div>
+            </article>
+            <footer>
+                <p>&copy; Michael Bowe 2015</p>
+            </footer>
+        </div>
+    </body>
+</html>

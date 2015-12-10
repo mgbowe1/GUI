@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <!--
-File: a5.html
+File: as7.html
 Author: Michael Bowe, UMass Lowell Student
 Email: michael_bowe@student.uml.edu OR michael.g.bowe@gmail.com
 
-Date: 10/6/2015
+Date: 11/5/2015
 -->
 <html>
     <head>
         <title>
-            91.461 Assignment 5
+            91.461 Assignment 7
         </title>
         <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
-        <script type="text/javascript" src="js/as5.js"></script>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/as7.js"></script>
         <link rel="stylesheet" href="css/pageStyles.css">
     </head>
     <body>
@@ -22,19 +23,26 @@ Date: 10/6/2015
                 <ul>
                     <li><a href="index.html">Assignment 2</a></li>
                     <li><a href="as3.html">Assignment 3</a></li>
-                    <li><a href="as5.html" class="active">Assignment 5</a></li>
+                    <li><a href="as5.html">Assignment 5</a></li>
                     <li><a href="as6.html">Assignment 6</a></li>
-                    <li><a href="as7.html">Assignment 7</a></li>
+                    <li><a href="as7.html" class="active">Assignment 7</a></li>
                     <li><a href="as9.html">Assignment 9</a></li>
                 </ul>
             </nav>
             <!-- Using Article to make use of new html5 tags
              most pages would make this a div with class content-->
             <article>
-                <h1 id="PageTitle">
-                </h1>
-                <h2 id="ByLine"></h2>
-                <div id="PageContentAS5">                   
+                <h1>Times Table</h1>
+                <form method="GET" action="" id="tableInputs">
+                    Row Min: <input type="number" name="rowLow" id="rowLow" /><br />
+                    Row Max: <input type="number" name="rowHigh" id="rowHigh" /><br />
+                    Column Min: <input type="number" name="colLow" id="colLow" /><br />
+                    Column Max: <input type="number" name="colHigh" id="colHigh" /><br />
+                    <button onclick="resetValues()">Reset</button>
+                    <input type="submit" value="Print Table" />
+                </form>
+                <div id="as6TableContainer">
+                    
                 </div>
             </article>
             <footer>
@@ -43,3 +51,4 @@ Date: 10/6/2015
         </div>
     </body>
 </html>
+
